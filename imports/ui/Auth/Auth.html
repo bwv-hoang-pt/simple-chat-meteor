@@ -1,0 +1,49 @@
+<template name="authContainer">
+    {{> Template.dynamic template=currentView}}
+</template>
+
+<template name="loginContainer">
+    <div class="auth-container" >
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+
+        <p>Don’t have an account yet?
+            <span>Sign up</span>
+        </p>
+    </div>
+</template>
+
+<template name="signupContainer">
+    <div class="auth-container" >
+        <h2>Sign up</h2>
+        <form id="signupForm">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="rePassword" name="confirmPassword" required>
+            </div>
+            <button type="submit">Sign up</button>
+        </form>
+
+        <p>Already have an account?
+            <span>Login here</span>
+        </p>
+    </div>
+</template>

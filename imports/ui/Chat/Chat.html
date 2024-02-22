@@ -1,0 +1,33 @@
+<body>
+    {{#if isUserLogged}} {{> chatContainer}} {{else}} {{> authContainer}} {{/if}}
+</body>
+
+<template name="chatContainer">
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>Simple Chat Meteor</h2>
+            <button id="logout">Logout</button>
+        </div>
+
+        {{> chatContent}} 
+	    {{> chatInput}}
+    </div>
+</template>
+
+<template name="chatContent">
+    <div class="chat-content">
+        {{#each chats}}
+        <div class="message">
+            <div class="username">{{ username }}</div>
+            <div class="message-content">{{ messageText }}</div>
+        </div>
+        {{/each}}
+    </div>
+</template>
+
+<template name="chatInput">
+    <div class="chat-input">
+        <input id="message" type="text" placeholder="Input your message..." />
+        <button id="sendMessage">Send</button>
+    </div>
+</template>
